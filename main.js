@@ -71,7 +71,7 @@ function draw() {
         circle(leftWristX,leftWristY,20);
         InNumberleftWristY = Number(leftWristY);
         remove_decimals = floor(InNumberleftWristY);
-        colume = remove_decimals/500;
+        volume = remove_decimals/500;
         document.getElementById("volume").innerHTML = "Volume = " + volume;
         song.setVolume(volume);
     }
@@ -89,6 +89,7 @@ function gotPoses(results)
     if(results.length > 0)
     {
         console.log(results);
+
         scoreRightWrist = results[0].pose.keypoints[10].score;
         scoreLeftWrist = results[0].pose.keypoints[9].score;
         console.log("scoreRightWrist = " + scoreRightWrist +" scoreLeftWrist = " +scoreLeftWrist);
